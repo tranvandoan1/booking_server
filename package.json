@@ -25,5 +25,8 @@
   "engines": {
     "npm": "8.19.2",
     "node": "16.18.1"
+  },
+  "devDependencies": {
+    "@vercel/node": "^2.6.4"
   }
 }
