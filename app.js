@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 import authRoute from './routes/auth.js';
 import usersRoute from './routes/users.js';
 import hotelsRoute from './routes/hotels.js';
-import roomsRoute from './routes/rooms.js';
+import RoomsRoute from './routes/Rooms.js';
 import transRoute from './routes/transactions.js';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
@@ -33,11 +33,11 @@ mongoose.connection.on('disconnected', () => {
 });
 
 //middlewares
-app.use('/api', authRoute);
-app.use('/api', usersRoute);
-app.use('/api', hotelsRoute);
-app.use('/api', roomsRoute);
-app.use('/api', transRoute);
+// app.use('/api', authRoute);
+// app.use('/api', usersRoute);
+// app.use('/api', hotelsRoute);
+app.use('/api', RoomsRoute);
+// app.use('/api', transRoute);
 
 app.use((err, req, res, next) => {
   const errorStatus = err.errorStatus || 500;
